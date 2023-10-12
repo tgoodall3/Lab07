@@ -9,7 +9,8 @@ class HourlyEmployee extends Employee{
     private $wage;
     private $hours;
 
-    public function __construct($hours, $wage){
+    public function __construct(Person $person, $ssn, $wage, $hours){
+        parent::__construct($person, $ssn);
         $this->person = $hours;
         $this->ssn = $wage;
     }
@@ -22,12 +23,13 @@ class HourlyEmployee extends Employee{
         return $this->hours;
     }
 
-    public function getPaymentAmount() {
-        return $this->paymentAmount;
+    public function CalculatePaymetAmount(){
+
     }
 
     public function toString() {
-        
+        return parent::toString() . ", Wage: {$this->wage}, Hours: {$this->hours}";
+
 
     }
 
