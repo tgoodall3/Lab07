@@ -24,6 +24,8 @@ class HourlyEmployee extends Employee{
     }
 
     public function CalculatePaymetAmount(){
+        $BasePayment = $this->hours * $this->wage;
+
 
     }
 
