@@ -7,7 +7,7 @@
  */
 // Define an abstract class for person
 abstract class Employee{
-    // Properties
+    //properties
     private $person;
     private $ssn;
 
