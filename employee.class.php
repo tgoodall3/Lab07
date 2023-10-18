@@ -12,7 +12,7 @@ abstract class Employee{
     private $ssn;
 
     //static property to keep track of the number of Employee objects created
-    private static $employeeCount = 0;
+    public static $employeeCount = 0;
 
     //constructor
     public function __construct($person, $ssn) {
