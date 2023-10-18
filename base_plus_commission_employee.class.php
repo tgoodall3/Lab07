@@ -11,13 +11,21 @@ class BasePlusCommissionEmployee extends CommissionEmployee {
     private $baseSalary;
 
     public function __construct($name, $employeeID, $sales, $baseSalary) {
-        parent::__construct($name, $employeeID, $sales);
+        parent::__construct($name, $employeeID, $sales, $commissionRate);
         $this->baseSalary = $baseSalary;
         // Increment the count when a new BasePlusCommissionEmployee is created
-        self::$employeeCount++;
+//        self::$employeeCount++;
     }
 
-    public function calculateEarnings() {
-        return parent::calculateEarnings() + $this->baseSalary;
+    public function getBaseSalary() {
+        return $this->baseSalary;
+    }
+
+    public function getPaymentAmount() {
+        return parent::getPaymentAmount() + $this->baseSalary;
+    }
+
+    public function toString() {
+        return parent::toString() . ", Base Salary: " . $this->baseSalary;
     }
 }

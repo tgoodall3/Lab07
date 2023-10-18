@@ -6,18 +6,33 @@
  * Description:
  */
 
-// commission_employee.class.php
 class CommissionEmployee extends Employee {
     private $sales;
+    private $commissionRate;
 
-    public function __construct($name, $employeeID, $sales) {
+    public function __construct($name, $employeeID, $sales, $commissionRate) {
         parent::__construct($name, $employeeID);
         $this->sales = $sales;
-        // Increment the count when a new CommissionEmployee is created
-        self::$employeeCount++;
+        $this->commissionRate = $commissionRate;
     }
 
-    public function calculateEarnings() {
-        return $this->sales * 0.10; // 10% commission
+    public function calculatePayment() {
+        return $this->weeklySalary;
+    }
+
+    public function getSales() {
+        return $this->sales;
+    }
+
+    public function getCommissionRate() {
+        return $this->commissionRate;
+    }
+
+    public function getPaymentAmount() {
+        return $this->sales * ($this->commissionRate / 100); // Calculate commission based on the rate
+    }
+
+    public function toString() {
+        return "Name: " . $this->getName() . ", Employee ID: " . $this->getEmployeeID() . ", Sales: " . $this->sales . ", Commission Rate: " . $this->commissionRate . "%";
     }
 }

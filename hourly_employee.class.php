@@ -9,10 +9,14 @@ class HourlyEmployee extends Employee{
     private $wage;
     private $hours;
 
-    public function __construct(Person $person, $ssn, $wage, $hours){
+    public function __construct($person, $ssn, $wage, $hours){
         parent::__construct($person, $ssn);
         $this->person = $hours;
         $this->ssn = $wage;
+    }
+
+    public function calculatePayment() {
+        return $this->weeklySalary;
     }
 
     public function getWage() {
@@ -23,7 +27,7 @@ class HourlyEmployee extends Employee{
         return $this->hours;
     }
 
-    public function CalculatePaymetAmount(){
+    public function getPaymentAmount(){
         $BasePayment = $this->hours * $this->wage;
 
 

@@ -6,7 +6,6 @@
  * Description:
  */
 
-// salaried_employee.class.php
 class SalariedEmployee extends Employee {
     private $weeklySalary;
 
@@ -17,7 +16,19 @@ class SalariedEmployee extends Employee {
         self::$employeeCount++;
     }
 
-    public function calculateEarnings() {
+    public function calculatePayment() {
         return $this->weeklySalary;
+    }
+
+    public function getWeeklySalary() {
+        return $this->weeklySalary;
+    }
+
+    public function getPaymentAmount() {
+        return $this->weeklySalary;
+    }
+
+    public function toString() {
+        return "Name: " . $this->getName() . ", Employee ID: " . $this->getEmployeeID() . ", Weekly Salary: " . $this->weeklySalary;
     }
 }
