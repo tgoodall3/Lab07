@@ -49,7 +49,7 @@ $objects = array(
 
 foreach ($objects as $object) {
     if ($object instanceof Invoice) {
-        echo "Invoice:\n";
+        echo "Invoice:";
         echo "Part number: {$object->getPartNumber()} ({$object->getPartDescription()})";
         echo "Quantity: {$object->getQuantity()}";
         echo "Price per item: $" . number_format($object->getPricePerItem(), 2);
@@ -59,7 +59,7 @@ foreach ($objects as $object) {
         echo "Social security number: {$object->getSSN()}";
         echo "Weekly salary: $" . number_format($object->getWeeklySalary(), 2);
     } elseif ($object instanceof HourlyEmployee) {
-        echo "Hourly Employee:\n";
+        echo "Hourly Employee:";
         echo "Name: {$object->getPerson()}";
         echo "Social security number: {$object->getSSN()}";
         echo "Wage per hour: $" . number_format($object->getWage(), 2);
