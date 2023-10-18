@@ -1,6 +1,6 @@
 <?php
 /**
- * Author: Ngun Hmung
+ * Author: Tyler Goodall
  * Date: 10/11/2023
  * File : commission_employee.class.php
  * Description:
