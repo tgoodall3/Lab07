@@ -29,7 +29,7 @@ class CommissionEmployee extends Employee {
     }
 
     public function getPaymentAmount() {
-        return $this->sales * ($this->commissionRate / 100); // Calculate commission based on the rate
+        return $this->sales * ($this->commissionRate); // Calculate commission based on the rate
     }
 
     public function toString() {

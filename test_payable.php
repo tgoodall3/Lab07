@@ -44,7 +44,7 @@ $objects = array(
     new SalariedEmployee("John Smith", "111-11-1111", 800.0),
     new HourlyEmployee("Karen Price", "222-22-2222", 16.75, 40),
     new CommissionEmployee("Sue Jones", "333-33-3333", 10000.0, 0.06),
-    new BasePlusCommissionEmployee("Bob Lewis", "444-44-4444", 5000.0, 0.04, 300.0)
+    new BasePlusCommissionEmployee("Bob Lewis", "444-44-4444", 5000.0, 300.0, .04)
 );
 
 foreach ($objects as $object) {
