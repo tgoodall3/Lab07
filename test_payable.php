@@ -49,40 +49,40 @@ $objects = array(
 
 foreach ($objects as $object) {
     if ($object instanceof Invoice) {
-        echo "Invoice:";
-        echo "Part number: {$object->getPartNumber()} ({$object->getPartDescription()})";
-        echo "Quantity: {$object->getQuantity()}";
-        echo "Price per item: $" . number_format($object->getPricePerItem(), 2);
+        echo "Invoice:" . "<br>";
+        echo "Part number: {$object->getPartNumber()} ({$object->getPartDescription()})" . "<br>";
+        echo "Quantity: {$object->getQuantity()}". "<br>";
+        echo "Price per item: $" . number_format($object->getPricePerItem(), 2). "<br>";
     } elseif ($object instanceof SalariedEmployee) {
-        echo "Salaried Employee:";
-        echo "Name: {$object->getPerson()}";
-        echo "Social security number: {$object->getSSN()}";
-        echo "Weekly salary: $" . number_format($object->getWeeklySalary(), 2);
+        echo "Salaried Employee:". "<br>";
+        echo "Name: {$object->getPerson()}". "<br>";
+        echo "Social security number: {$object->getSSN()}". "<br>";
+        echo "Weekly salary: $" . number_format($object->getWeeklySalary(), 2). "<br>";
     } elseif ($object instanceof HourlyEmployee) {
-        echo "Hourly Employee:";
-        echo "Name: {$object->getPerson()}";
-        echo "Social security number: {$object->getSSN()}";
-        echo "Wage per hour: $" . number_format($object->getWage(), 2);
-        echo "Hours: {$object->getHours()}";
+        echo "Hourly Employee:". "<br>";
+        echo "Name: {$object->getPerson()}". "<br>";
+        echo "Social security number: {$object->getSSN()}". "<br>";
+        echo "Wage per hour: $" . number_format($object->getWage(), 2). "<br>";
+        echo "Hours: {$object->getHours()}". "<br>";
     } elseif ($object instanceof CommissionEmployee) {
-        echo "Commission Employee:";
-        echo "Name: {$object->getPerson()}";
-        echo "Social security number: {$object->getSSN()}";
-        echo "Gross sale: $" . number_format($object->getSales(), 2);
-        echo "Commission rate: " . number_format($object->getCommissionRate(), 2);
+        echo "Commission Employee:". "<br>";
+        echo "Name: {$object->getPerson()}". "<br>";
+        echo "Social security number: {$object->getSSN()}". "<br>";
+        echo "Gross sale: $" . number_format($object->getSales(), 2). "<br>";
+        echo "Commission rate: " . number_format($object->getCommissionRate(), 2). "<br>";
     } elseif ($object instanceof BasePlusCommissionEmployee) {
-        echo "Base Plus Commission Employee:";
-        echo "Name: {$object->getPerson()}";
-        echo "Social security number: {$object->getSSN()}";
-        echo "Gross sale: $" . number_format($object->getSales(), 2);
-        echo "Commission rate: " . number_format($object->getCommissionRate(), 2);
-        echo "Base salary: $" . number_format($object->getBaseSalary(), 2);
+        echo "Base Plus Commission Employee:". "<br>";
+        echo "Name: {$object->getPerson()}". "<br>";
+        echo "Social security number: {$object->getSSN()}". "<br>";
+        echo "Gross sale: $" . number_format($object->getSales(), 2). "<br>";
+        echo "Commission rate: " . number_format($object->getCommissionRate(), 2). "<br>";
+        echo "Base salary: $" . number_format($object->getBaseSalary(), 2). "<br>";
     }
 
-    echo "Earning: $" . number_format($object->getPaymentAmount(), 2);
+    echo "Earning: $" . number_format($object->getPaymentAmount(), 2). "<br>";
 }
 
-echo "Number of invoices: " . Invoice::getInvoiceCount();
+echo "Number of invoices: " . Invoice::getInvoiceCount(). "<br>";
 echo "Number of employees: " . Employee::getEmployeeCount();
 
 

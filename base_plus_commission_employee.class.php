@@ -10,7 +10,7 @@
 class BasePlusCommissionEmployee extends CommissionEmployee {
     private $baseSalary;
 
-    public function __construct($name, $employeeID, $sales, $baseSalary) {
+    public function __construct($name, $employeeID, $sales, $baseSalary, $commissionRate) {
         parent::__construct($name, $employeeID, $sales, $commissionRate);
         $this->baseSalary = $baseSalary;
         // Increment the count when a new BasePlusCommissionEmployee is created
